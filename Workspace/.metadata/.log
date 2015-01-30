@@ -111,3 +111,24 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-01-30 09:31:57.931
+!MESSAGE An internal error occurred during: "Resetting to HEAD".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of reset command. {0}
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:227)
+	at org.eclipse.egit.core.op.ResetOperation.reset(ResetOperation.java:97)
+	at org.eclipse.egit.core.op.ResetOperation.access$0(ResetOperation.java:85)
+	at org.eclipse.egit.core.op.ResetOperation$1.run(ResetOperation.java:74)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.egit.core.op.ResetOperation.execute(ResetOperation.java:78)
+	at org.eclipse.egit.core.internal.job.JobUtil$2.runInWorkspace(JobUtil.java:105)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Could not rename file C:\Users\matty_000.LIZS.000\Documents\GitHub\Team404HDC\Workspace\.metadata\.plugins\org.eclipse.cdt.core\._.log9207146821027699284.tmp to C:\Users\matty_000.LIZS.000\Documents\GitHub\Team404HDC\Workspace\.metadata\.plugins\org.eclipse.cdt.core\.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1232)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:459)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:393)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:200)
+	... 8 more
