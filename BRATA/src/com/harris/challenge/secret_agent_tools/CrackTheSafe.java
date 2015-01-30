@@ -101,15 +101,15 @@ public class CrackTheSafe extends Activity{
     public static SafeCombination getCombo(String inputHash){
     	
 		String XLATE = "BCDGHJKLMNPQRSTVWZbcdghjkmnpqrstvwz";
-    	int h = 0;
-    	for(int i = 3; i >= 0; i--){
-    		for(int j = 0; j < XLATE.length(); j++){
-    			if(inputHash.charAt(i) == XLATE.charAt(j)){
-    				h*= XLATE.length();
-    				h+= j;
-    				break;}}}
+		int h = 0;
+		for(int i = 3; i >= 0; i--){
+			for(int j = 0; j < XLATE.length(); j++){
+				if(inputHash.charAt(i) == XLATE.charAt(j)){
+					h*= XLATE.length();
+					h+= j;
+					break;}}}
     	
-    	return new SafeCombination((((h/127)/127)%127),((h/127)%127),(h%127));
+		return new SafeCombination((((h/127)/127)%127),((h/127)%127),(h%127));
     }
 
     /**
