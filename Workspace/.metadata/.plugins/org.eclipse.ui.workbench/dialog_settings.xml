@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="737" key="dialogHeight"/>
-		<item value="1440" key="dialogWidth"/>
+		<item value="1080" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -13,7 +13,7 @@
 		</list>
 	</section>
 	<section name="ImportExportAction">
-		<item value="com.android.ide.eclipse.adt.project.ImportProjectWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.egit.ui.internal.clone.GitCloneWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="com.android.ide.eclipse.wizards.category"/>
 			<item value="org.eclipse.egit.ui.internal.clone.gitclonecategory"/>
