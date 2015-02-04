@@ -98,7 +98,7 @@ public class CrackTheSafe extends Activity{
         return new String( k );
     }
     
-    public static SafeCombination getCombo(String inputHash){
+    public String getCombo(String inputHash){
     	
 		String XLATE = "BCDGHJKLMNPQRSTVWZbcdghjkmnpqrstvwz";
 		int h = 0;
@@ -108,8 +108,7 @@ public class CrackTheSafe extends Activity{
 					h*= XLATE.length();
 					h+= j;
 					break;}}}
-    	
-		return new SafeCombination((((h/127)/127)%127),((h/127)%127),(h%127));
+    	return String.valueOf((((h/127)/127)%127)) + ", " + String.valueOf((h/127)%127) + ", " + String.valueOf(h%127);
     }
 
     /**
