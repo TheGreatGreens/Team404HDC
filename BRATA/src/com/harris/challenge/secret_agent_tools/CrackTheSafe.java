@@ -14,6 +14,8 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.harris.challenge.brata.BrataLauncherActivity;
 import com.harris.challenge.brata.R;
@@ -24,6 +26,8 @@ import com.harris.challenge.secret_agent_tools.SafeCombination;
 public class CrackTheSafe extends Activity{
     AlertDialog dialog;
     Button buttonStartChallenge;
+    EditText hashField;
+    TextView hashCoords;
     
     /**
      * Function used for initializing activity variables, such as 
@@ -34,6 +38,9 @@ public class CrackTheSafe extends Activity{
         super.onCreate(savedInstanceState);
         // load the xml layout before initializing widgets
         setContentView(R.layout.activity_crack_the_safe);
+        
+        hashField = (EditText)findViewById(R.id.hashField);
+        hashCoords = (TextView)findViewById(R.id.hashCoords);
 
         buttonStartChallenge = (Button)findViewById(R.id.buttonCtsStartChallenge);
         buttonStartChallenge.setOnClickListener(new Button.OnClickListener() {
@@ -48,7 +55,10 @@ public class CrackTheSafe extends Activity{
                  * In this case the MasterServer will update your progress and send back a clue that must
                  * be decoded. 
                  */
-                MasterServerCommunicator.getInstructionUsingQR(CrackTheSafe.this);
+            	
+            	hashCoords.setText(getCombo(String.valueOf(hashField.getText())));
+            	
+                //MasterServerCommunicator.getInstructionUsingQR(CrackTheSafe.this);
             }
         });
     }
