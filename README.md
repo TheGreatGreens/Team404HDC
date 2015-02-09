@@ -1,14 +1,14 @@
 # Team404HDC
-Harris Android Design Challenge Team404 2014-2015
+## Harris Android Design Challenge Team404 2014-2015
 
-To-Do:
+### To-Do:
 - Send CTS output to recieving server
 - Tools
 
-General Notes:
+### General Notes:
 - Do NOT delete code unless it is your own
 
-Getting Started w/ Eclipse:
+### Getting Started w/ Eclipse:
 1. Open Eclipse (perferably Eclispe Luna with ADT and GIT plugins)
 2. Right-click in Project Explorer pane
 3. Click import, in the GIT dropdown, select Projects from Git
@@ -21,14 +21,15 @@ Getting Started w/ Eclipse:
 10. Document your changes (NO CODE, just an overview. For formatting see below)
 11. Click Commit and Push (This will push the Commit online. If no internet access is available, just save your edits and commit when online)
 
-Commit Formatting (Not necessary, but please follw for consistancy):
+### Commit Formatting (Not necessary, but please follw for consistancy):
+Title (first line in Eclipse commit): Update date - name
 
-Title (first line in Eclipse commit):Update <date> - <name>
-Content (third line and lower in Eclipse):-<edit overview #1>
-
-EXAMPLE:
+Content (third line and lower in Eclipse): - edit overview #1
+#### EXAMPLE:
+```
 Update 1/1/2015 - Matt
 
--Added workspace files
--Added method to complete CTS challenge
--Added CTS GUI
+- Added workspace files
+- Added method to complete CTS challenge
+- Added CTS GUI
+```
