@@ -40,7 +40,7 @@ public class MainLauncher extends Activity implements OnClickListener{
 	        setContentView(R.layout.activity_main_launcher);
 	        
 	        //setup buttons
-	        incidentsLauncher = (TextView) findViewById(R.id.launchIndicents);
+	        //incidentsLauncher = (TextView) findViewById(R.id.launchIndicents);
 	        brataToolsLauncher = (TextView) findViewById(R.id.launchTools);
 	        secretAgentToolsLauncher = (TextView) findViewById(R.id.LaunchChallenges);
 	        
@@ -55,9 +55,9 @@ public class MainLauncher extends Activity implements OnClickListener{
 	public void onClick(View view) {
 		switch(view.getId()) {
 		
-		case R.id.launchIndicents:
-			startActivity(new Intent(this, IncidentLauncherActivity.class));
-			break;
+		//case R.id.launchIndicents:
+			//startActivity(new Intent(this, IncidentLauncherActivity.class));
+			//break;
 			
 		case R.id.launchTools:
 			startActivity(new Intent(this, BrataLauncherActivity.class));

@@ -28,5 +28,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
     <string name="hashCoords"></string>
+    <string name="DistanceTitle"></string>
+    <string name="BearingTitle"></string>
+    <string name="BearingToTargetTitle"></string>
 
 </resources>

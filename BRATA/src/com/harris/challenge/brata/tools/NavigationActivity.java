@@ -30,6 +30,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -38,7 +39,12 @@ import android.widget.Toast;
  */
 public class NavigationActivity extends Activity implements OnClickListener, GPSServiceListener{
 
-    private GPSService gpsService = null;
+    public TextView distanceData;
+	public TextView bearingData;
+	public TextView bearingToTargetData;
+	
+	
+	private GPSService gpsService = null;
 
     /*
      * (non-Javadoc)
@@ -56,6 +62,10 @@ public class NavigationActivity extends Activity implements OnClickListener, GPS
         // to our Activity. We can now find views within that layout and
         // manipulate them. Don't try to call findViewById() before this!
         setContentView(R.layout.activity_navigation);
+        
+        distanceData = (TextView)findViewById(R.id.distanceData);
+        bearingData = (TextView)findViewById(R.id.bearingData);
+        bearingToTargetData = (TextView)findViewById(R.id.bearingToTargetData);
 
         // The GPS Service runs independently of the applications 
         // activities.  The bindService() function allows this 
@@ -151,6 +161,10 @@ public class NavigationActivity extends Activity implements OnClickListener, GPS
                 "; Longitude: "+longitude,
                 Toast.LENGTH_SHORT).show();
         }
+        
+        
+        
+        //distanceData.setText();
 
         //TODO:  Use the location coordinates to do something useful
 
