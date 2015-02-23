@@ -9,7 +9,7 @@
 - Do NOT delete code unless it is your own
 
 ### Getting Started w/ Eclipse:
-1. Open Eclipse (perferably Eclispe Luna with ADT and GIT plugins)
+1. Open Eclipse (perferably Eclispe Luna (latest version) with ADT and GIT plugins (git should be preinstalled))
 2. Right-click in Project Explorer pane
 3. Click import, in the GIT dropdown, select Projects from Git
 4. Go to Clone URI
