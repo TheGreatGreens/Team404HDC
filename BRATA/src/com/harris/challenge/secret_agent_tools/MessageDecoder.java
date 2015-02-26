@@ -45,12 +45,26 @@ public class MessageDecoder {
     {
         MessageDecoder.encodedMessage = encodedString;
         
-        /*
-         * Put code here to decode the encodedString and set result.
-         * Also be sure to set decodedMessage to the result.
-         */
-        String result = encodedString;
-        MessageDecoder.decodedMessage = result;
-        return result;
+		int factor = 0;
+		int strIndex = 0;
+		int nextRow = 1;
+		for (int i = 2; i<MessageDecoder.encodedMessage.length(); i++){
+			if (MessageDecoder.encodedMessage.length() % i == 0){
+				factor = i;
+				break;
+			}
+		}
+		while (nextRow <= factor){
+			if(strIndex >= MessageDecoder.encodedMessage.length()){
+				strIndex = nextRow;
+				nextRow++;
+			}
+			else{
+				MessageDecoder.decodedMessage = MessageDecoder.decodedMessage + MessageDecoder.encodedMessage.charAt(strIndex);
+				strIndex += factor;
+			}
+		}
+		
+        return MessageDecoder.decodedMessage;
     }
 }

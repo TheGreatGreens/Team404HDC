@@ -19,7 +19,7 @@
         android:layout_below="@+id/request"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
-        android:text="hello"
+        android:text="Returned Message"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_below="@+id/editText1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:text="Large Text"
+        android:text="Longitude"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_below="@+id/returnClue"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Large Text"
+        android:text="Latitude"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
@@ -56,10 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText1"
         android:layout_below="@+id/textView2"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
+        android:ems="10" />
 
     <Button
         android:id="@+id/copyGPS"

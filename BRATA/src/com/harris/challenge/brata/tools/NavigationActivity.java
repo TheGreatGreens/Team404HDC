@@ -33,26 +33,15 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * @author Andrew
- * 
- */
+
 public class NavigationActivity extends Activity implements OnClickListener, GPSServiceListener{
 
     public TextView distanceData;
 	public TextView bearingData;
 	public TextView bearingToTargetData;
 	
-	
 	private GPSService gpsService = null;
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see android.app.Activity#onCreate(android.os.Bundle)
-     * 
-     * This will be called whenever this activity is created.
-     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,12 +83,7 @@ public class NavigationActivity extends Activity implements OnClickListener, GPS
         super.onStop();
         unbindService(this);
     }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see android.view.View.OnClickListener#onClick(android.view.View)
-     */
+    
     public void onClick(View view) {
     }
 
